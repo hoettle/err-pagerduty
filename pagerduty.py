@@ -189,7 +189,7 @@ class PagerDuty(BotPlugin):
                 oncall_index = map(itemgetter('pd_id'), users).index(oncall_pd_id)
                 oncall_user = users[oncall_index]
                 return "%s has the pager" % (oncall_user['uid'])
-            except Exception, e:
+            except Exception as e:
                 return "Sorry, I couldn't figure out who is on call currently: %s" % (e,)
         else:
             return "Sorry, PagerDuty is not configured"
