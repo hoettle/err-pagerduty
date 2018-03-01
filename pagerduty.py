@@ -1,7 +1,7 @@
 from errbot import BotPlugin, botcmd
 from errbot.utils import get_sender_username
 from operator import itemgetter
-from urllib2 import HTTPError
+from urllib.error import HTTPError
 from datetime import datetime, timedelta
 from tzlocal import get_localzone
 import logging
